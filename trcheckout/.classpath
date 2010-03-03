@@ -12,5 +12,7 @@
 	<classpathentry kind="lib" path="WEB-INF/lib/zclasspath-1.4.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/ztemplates-0.9.9.6.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/ztest-0.5.3.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/braintree-java.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/servlet-api.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>
 </classpath>
