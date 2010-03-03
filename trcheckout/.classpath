@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/freemarker.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/javassist.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jdom.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/jgrapht-jdk1.5.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/json.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/log4j-1.2.9.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/velocity-dep-1.5.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/zclasspath-1.4.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/ztemplates-0.9.9.6.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/ztest-0.5.3.jar"/>
+	<classpathentry kind="output" path="WEB-INF/classes"/>
+</classpath>
