@@ -1,0 +1,100 @@
+<form action="$trUrl" autocomplete="off" method="post" />
+    <fieldset>
+        <legend>Customer</legend>
+        <div><label for="transaction_customer_first_name">First Name</label></div>
+        <div>
+            #if ( $anyFirstNameErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="transaction_customer_first_name" name="transaction[customer][first_name]" size="30" type="text" value="$firstName"/>
+                </div>
+                #foreach ( $error in $firstNameErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="transaction_customer_first_name" name="transaction[customer][first_name]" size="30" type="text" value="$firstName"/>
+                </div>
+            #end
+        </div>
+        <div><label for="transaction_customer_last_name">Last Name</label></div>
+        <div>
+            #if ( $anyLastNameErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="transaction_customer_last_name" name="transaction[customer][last_name]" size="30" type="text" value="$lastName"/>
+                </div>
+                #foreach ( $error in $lastNameErrors )
+                <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="transaction_customer_last_name" name="transaction[customer][last_name]" size="30" type="text" value="$lastName"/>
+                </div>
+            #end
+        </div>
+        <div><label for="transaction_customer_email">Email</label></div>
+        <div>
+            #if ( $anyEmailErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="transaction_customer_email" name="transaction[customer][email]" size="30" type="text" value="$email"/>
+                </div>
+                #foreach ( $error in $emailErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="transaction_customer_email" name="transaction[customer][email]" size="30" type="text" value="$email"/>
+                </div>
+            #end
+        </div>
+    </fieldset>  
+    <fieldset>
+        <legend>Credit Card</legend>
+        <div><label for="transaction_credit_card_number">Number</label></div>
+        <div>
+            #if ( $anyNumberErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="transaction_credit_card_number" name="transaction[credit_card][number]" size="30" type="text" />
+                </div>
+                #foreach ( $error in $numberErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="transaction_credit_card_number" name="transaction[credit_card][number]" size="30" type="text" />
+                </div>
+            #end
+        </div>
+        <div><label for="transaction_credit_card_expiration_date">Expiration Date (MM/YY)</label></div>
+        <div>
+            #if ( $anyExpirationDateErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="transaction_credit_card_expiration_date" name="transaction[credit_card][expiration_date]" size="30" type="text" value="$expirationDate"/>
+                </div>
+                #foreach ( $error in $expirationDateErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="transaction_credit_card_expiration_date" name="transaction[credit_card][expiration_date]" size="30" type="text" value="$expirationDate"/>
+                </div>
+            #end
+        </div>
+        <div><label for="transaction_credit_card_cvv">CVV</label></div>
+        <div>
+            #if ( $anyCvvErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <div class=""><input id="transaction_credit_card_cvv" name="transaction[credit_card][cvv]" size="30" type="text" /></div>
+                </div>
+                #foreach ( $error in $cvvErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <div class=""><input id="transaction_credit_card_cvv" name="transaction[credit_card][cvv]" size="30" type="text" /></div>
+                </div>
+            #end
+        </div>
+    </fieldset>  
+    <input id="tr_data" name="tr_data" type="hidden" value="$trData" />
+    <input id="transaction_submit" name="commit" type="submit" value="Submit" />
+</form>

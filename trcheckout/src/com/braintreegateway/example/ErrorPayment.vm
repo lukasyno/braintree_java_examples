@@ -1,0 +1,11 @@
+<html>
+    <head>
+        <title>Braintree Checkout Example</title>
+    </head>
+    <body>
+        <h1>Payment: $$amount</h1>
+        <div style="color: red;">$numErrors error(s)</div>
+        
+        #parse( "com/braintreegateway/example/Form.vm" )
+    </body>
+</html>
