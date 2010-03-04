@@ -7,10 +7,10 @@ public class Configuration {
 
     public static BraintreeGateway getBraintreeGateway() {
         return new BraintreeGateway(
-                Environment.DEVELOPMENT, 
-                "integration_merchant_id",
-                "integration_public_key",
-                "integration_private_key"
+                Environment.SANDBOX,
+                "your_merchant_id",
+                "your_public_key",
+                "your_private_key"
             );
     }
 }
