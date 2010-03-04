@@ -30,4 +30,24 @@ public class Payment {
     public String getAmount() {
         return amount;
     }
+    
+    @ZExpose
+    public String getEmail() {
+        return "";
+    }
+    
+    @ZExpose
+    public String getExpirationDate() {
+        return "";
+    }
+    
+    @ZExpose
+    public String getFirstName() {
+        return "";
+    }
+    
+    @ZExpose
+    public String getLastName() {
+        return "";
+    }
 }
