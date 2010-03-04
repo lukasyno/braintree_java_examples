@@ -60,12 +60,4 @@ to optimize application startup time
       org.ztemplates.web.velocity.ZVelocityContextListener
     </listener-class>
   </listener>
-
-  <!-- uncomment to add FreeMarker support -->
-  <listener>
-    <listener-class>
-      org.ztemplates.web.freemarker.ZFreeMarkerContextListener
-    </listener-class>
-  </listener>
-
 </web-app>
