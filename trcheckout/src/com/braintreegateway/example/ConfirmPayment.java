@@ -41,7 +41,7 @@ public class ConfirmPayment {
     
     @ZExpose
     public String getNumber() {
-        return transaction.getCreditCard().getBin() + "******" + transaction.getCreditCard().getLast4();
+        return transaction.getCreditCard().getMaskedNumber();
     }
     
     @ZExpose
