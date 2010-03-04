@@ -24,7 +24,7 @@ public class ConfirmPaymentAction {
         if (result.isSuccess()) {
             ZTemplates.getServletService().render(new ConfirmPayment(result.getTarget()));
         } else {
-            ZTemplates.getServletService().render(new ErrorPayment());
+            ZTemplates.getServletService().render(new ErrorPayment(gateway, result.getParameters(), result.getErrors()));
         }
     }
 }

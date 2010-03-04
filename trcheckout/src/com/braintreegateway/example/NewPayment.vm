@@ -3,9 +3,9 @@
         <title>Braintree Checkout Example</title>
     </head>
     <body>
-        <h1>Payment: $${amount}</h1>
+        <h1>Payment: $$amount</h1>
 
-        <form action="${trUrl}" autocomplete="off" method="post" />
+        <form action="$trUrl" autocomplete="off" method="post" />
             <fieldset>
                 <legend>Customer</legend>
                 <div><label for="transaction_customer_first_name">First Name</label></div>
@@ -28,7 +28,7 @@
                 <div><label for="transaction_credit_card_cvv">CVV</label></div>
                 <div><div class=""><input id="transaction_credit_card_cvv" name="transaction[credit_card][cvv]" size="30" type="text" /></div></div>
             </fieldset>  
-            <input id="tr_data" name="tr_data" type="hidden" value="${trData}" />
+            <input id="tr_data" name="tr_data" type="hidden" value="$trData" />
             <input id="transaction_submit" name="commit" type="submit" value="Submit" />
         </form>
     </body>
