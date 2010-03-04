@@ -21,7 +21,10 @@ public class Payment {
     public String getTrData() {
         TransactionRequest trRequest = new TransactionRequest().
             type(Transaction.Type.SALE).
-            amount(new BigDecimal(getAmount()));
+            amount(new BigDecimal(getAmount())).
+            options().
+                submitForSettlement(true).
+                done();
         
         return gateway.trData(trRequest, "http://localhost:8080/trcheckout/payments/confirm");
     }

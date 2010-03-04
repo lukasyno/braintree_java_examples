@@ -3,7 +3,7 @@
         <legend>Customer</legend>
         <div><label for="transaction_customer_first_name">First Name</label></div>
         <div>
-            #if ( $areFirstNameErrors )
+            #if ( $anyFirstNameErrors )
                 <div style="background-color: red; display: table; padding: 2px;">
                     <input id="transaction_customer_first_name" name="transaction[customer][first_name]" size="30" type="text" value="$firstName"/>
                 </div>
@@ -18,7 +18,7 @@
         </div>
         <div><label for="transaction_customer_last_name">Last Name</label></div>
         <div>
-            #if ( $areLastNameErrors )
+            #if ( $anyLastNameErrors )
                 <div style="background-color: red; display: table; padding: 2px;">
                     <input id="transaction_customer_last_name" name="transaction[customer][last_name]" size="30" type="text" value="$lastName"/>
                 </div>
@@ -33,7 +33,7 @@
         </div>
         <div><label for="transaction_customer_email">Email</label></div>
         <div>
-            #if ( $areEmailErrors )
+            #if ( $anyEmailErrors )
                 <div style="background-color: red; display: table; padding: 2px;">
                     <input id="transaction_customer_email" name="transaction[customer][email]" size="30" type="text" value="$email"/>
                 </div>
@@ -51,7 +51,7 @@
         <legend>Credit Card</legend>
         <div><label for="transaction_credit_card_number">Number</label></div>
         <div>
-            #if ( $areNumberErrors )
+            #if ( $anyNumberErrors )
                 <div style="background-color: red; display: table; padding: 2px;">
                     <input id="transaction_credit_card_number" name="transaction[credit_card][number]" size="30" type="text" />
                 </div>
@@ -66,7 +66,7 @@
         </div>
         <div><label for="transaction_credit_card_expiration_date">Expiration Date (MM/YY)</label></div>
         <div>
-            #if ( $areExpirationDateErrors )
+            #if ( $anyExpirationDateErrors )
                 <div style="background-color: red; display: table; padding: 2px;">
                     <input id="transaction_credit_card_expiration_date" name="transaction[credit_card][expiration_date]" size="30" type="text" value="$expirationDate"/>
                 </div>
@@ -81,7 +81,7 @@
         </div>
         <div><label for="transaction_credit_card_cvv">CVV</label></div>
         <div>
-            #if ( $areCvvErrors )
+            #if ( $anyCvvErrors )
                 <div style="background-color: red; display: table; padding: 2px;">
                     <div class=""><input id="transaction_credit_card_cvv" name="transaction[credit_card][cvv]" size="30" type="text" /></div>
                 </div>

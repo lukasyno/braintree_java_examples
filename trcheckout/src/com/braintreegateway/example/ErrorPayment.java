@@ -44,7 +44,7 @@ public class ErrorPayment extends Payment {
     }
     
     @ZExpose
-    public boolean getAreNumberErrors() {
+    public boolean getAnyNumberErrors() {
         return errors.forObject("transaction").forObject("credit_card").onField("number").size() > 0;
     }
     
@@ -54,7 +54,7 @@ public class ErrorPayment extends Payment {
     }
     
     @ZExpose
-    public boolean getAreExpirationDateErrors() {
+    public boolean getAnyExpirationDateErrors() {
         return errors.forObject("transaction").forObject("credit_card").onField("expiration_date").size() > 0;
     }
     
@@ -64,7 +64,7 @@ public class ErrorPayment extends Payment {
     }
     
     @ZExpose
-    public boolean getAreEmailErrors() {
+    public boolean getAnyEmailErrors() {
         return errors.forObject("transaction").forObject("customer").onField("email").size() > 0;
     }
     
@@ -74,7 +74,7 @@ public class ErrorPayment extends Payment {
     }
     
     @ZExpose
-    public boolean getAreFirstNameErrors() {
+    public boolean getAnyFirstNameErrors() {
         return errors.forObject("transaction").forObject("customer").onField("first_name").size() > 0;
     }
     
@@ -84,7 +84,7 @@ public class ErrorPayment extends Payment {
     }
     
     @ZExpose
-    public boolean getAreLastNameErrors() {
+    public boolean getAnyLastNameErrors() {
         return errors.forObject("transaction").forObject("customer").onField("last_name").size() > 0;
     }
     
@@ -94,7 +94,7 @@ public class ErrorPayment extends Payment {
     }
     
     @ZExpose
-    public boolean getAreCvvErrors() {
+    public boolean getAnyCvvErrors() {
         return errors.forObject("transaction").forObject("credit_card").onField("cvv").size() > 0;
     }
     
