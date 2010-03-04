@@ -8,6 +8,6 @@
 	<classpathentry kind="lib" path="WEB-INF/lib/ztemplates-0.9.9.6.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="WEB-INF/lib/jgrapht-jdk1.5.jar"/>
-	<classpathentry kind="lib" path="WEB-INF/lib/braintree-java-1.1.0.jar"/>
+	<classpathentry kind="lib" path="WEB-INF/lib/braintree-java-1.1.1.jar"/>
 	<classpathentry kind="output" path="WEB-INF/classes"/>
 </classpath>
