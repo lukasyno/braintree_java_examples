@@ -16,36 +16,43 @@ public class ConfirmPayment {
     
     @ZExpose
     public String getAmount() {
-        return transaction.getAmount().toString();
+        return emptyStringIfNull(transaction.getAmount().toString());
     }
     
     @ZExpose
     public String getId() {
-        return transaction.getId();
+        return emptyStringIfNull(transaction.getId());
     }
     
     @ZExpose
     public String getFirstName() {
-        return transaction.getCustomer().getFirstName();
+        return emptyStringIfNull(transaction.getCustomer().getFirstName());
     }
     
     @ZExpose
     public String getLastName() {
-        return transaction.getCustomer().getLastName();
+        return emptyStringIfNull(transaction.getCustomer().getLastName());
     }
     
     @ZExpose
     public String getEmail() {
-        return transaction.getCustomer().getEmail();
+        return emptyStringIfNull(transaction.getCustomer().getEmail());
     }
     
     @ZExpose
     public String getNumber() {
-        return transaction.getCreditCard().getMaskedNumber();
+        return emptyStringIfNull(transaction.getCreditCard().getMaskedNumber());
     }
     
     @ZExpose
     public String getCardType() {
-        return transaction.getCreditCard().getCardType();
+        return emptyStringIfNull(transaction.getCreditCard().getCardType());
+    }
+
+    private String emptyStringIfNull(String string) {
+    	if (string == null) {
+    		return "";
+    	}
+    	return string;
     }
 }

@@ -5,5 +5,10 @@ payment gateway using the [Braintree Java Library](http://www.braintreepaymentso
 
 ## trcheckout
 
-A webapp example of creating one time transactions use the Braintree transparent redirect API.
+A webapp example of creating one time transactions using the Braintree transparent redirect API.
 See trcheckout/README.md for more information.
+
+## trvault
+
+A webapp example of creating customer and associated credit card vault records using the Braintree transparent redirect API.
+See trvault/README.md for more information.
