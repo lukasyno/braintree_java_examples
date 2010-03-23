@@ -1,0 +1,10 @@
+<html>
+    <head>
+        <title>Braintree Vault Example</title>
+    </head>
+    <body>
+		<h1>Create Vault Customer</h1>
+		
+        #parse( "com/braintreegateway/example/Form.vm" )
+    </body>
+</html>

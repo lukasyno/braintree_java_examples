@@ -1,0 +1,145 @@
+<form action="$trUrl" autocomplete="off" method="post" />
+    <fieldset>
+        <legend>Customer</legend>
+		<div><label for="customer_company">Company</label></div>
+        <div>
+            #if ( $anyCompanyErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="customer_company" name="customer[company]" size="30" type="text" value="$company"/>
+                </div>
+                #foreach ( $error in $companyErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="customer_company" name="customer[company]" size="30" type="text" value="$company"/>
+                </div>
+            #end
+        </div>
+		<div><label for="customer_email">Email</label></div>
+        <div>
+            #if ( $anyEmailErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="customer_email" name="customer[email]" size="30" type="text" value="$email"/>
+                </div>
+                #foreach ( $error in $emailErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="customer_email" name="customer[email]" size="30" type="text" value="$email"/>
+                </div>
+            #end
+        </div>
+		<div><label for="customer_fax">Fax</label></div>
+        <div>
+            #if ( $anyFaxErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="customer_fax" name="customer[fax]" size="30" type="text" value="$fax"/>
+                </div>
+                #foreach ( $error in $faxErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="customer_fax" name="customer[fax]" size="30" type="text" value="$fax"/>
+                </div>
+            #end
+        </div>
+		<div><label for="customer_first_name">First Name</label></div>
+        <div>
+            #if ( $anyFirstNameErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="customer_first_name" name="customer[first_name]" size="30" type="text" value="$firstName"/>
+                </div>
+                #foreach ( $error in $firstNameErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="customer_first_name" name="customer[first_name]" size="30" type="text" value="$firstName"/>
+                </div>
+            #end
+        </div>
+        <div><label for="customer_last_name">Last Name</label></div>
+        <div>
+            #if ( $anyLastNameErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="customer_last_name" name="customer[last_name]" size="30" type="text" value="$lastName"/>
+                </div>
+                #foreach ( $error in $lastNameErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="customer_last_name" name="customer[last_name]" size="30" type="text" value="$lastName"/>
+                </div>
+            #end
+        </div>
+		<div><label for="customer_phone">Phone</label></div>
+        <div>
+            #if ( $anyPhoneErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="customer_phone" name="customer[phone]" size="30" type="text" value="$phone"/>
+                </div>
+                #foreach ( $error in $phoneErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="customer_phone" name="customer[phone]" size="30" type="text" value="$phone"/>
+                </div>
+            #end
+        </div>
+		<div><label for="customer_website">Website</label></div>
+        <div>
+            #if ( $anyWebsiteErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="customer_website" name="customer[website]" size="30" type="text" value="$website"/>
+                </div>
+                #foreach ( $error in $websiteErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="customer_website" name="customer[website]" size="30" type="text" value="$website"/>
+                </div>
+            #end
+        </div>
+    </fieldset>  
+	<fieldset>
+        <legend>Credit Card</legend>
+		<div><label for="customer_credit_card_number">Number</label></div>
+        <div>
+            #if ( $anyCreditCardNumberErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="customer_credit_card_number" name="customer[credit_card][number]" size="30" type="text" value="$creditCardNumber"/>
+                </div>
+                #foreach ( $error in $creditCardNumberErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="customer_credit_card_number" name="customer[credit_card][number]" size="30" type="text" value="$creditCardNumber"/>
+                </div>
+            #end
+        </div>
+		<div><label for="customer_credit_card_expiration_date">Expiration Date (MM/YY)</label></div>
+        <div>
+            #if ( $anyCreditCardExpirationDateErrors )
+                <div style="background-color: red; display: table; padding: 2px;">
+                    <input id="customer_credit_card_expiration_date" name="customer[credit_card][expiration_date]" size="30" type="text" value="$creditCardExpirationDate"/>
+                </div>
+                #foreach ( $error in $creditCardExpirationDateErrors )
+                    <div style="color: red;">$error.getMessage()</div>    
+                #end
+            #else
+                <div>
+                    <input id="customer_credit_card_expiration_date" name="customer[credit_card][expiration_date]" size="30" type="text" value="$creditCardExpirationDate"/>
+                </div>
+            #end
+        </div>
+	</fieldset>
+    <input id="tr_data" name="tr_data" type="hidden" value="$trData" />
+    <input id="customer_submit" name="commit" type="submit" value="Submit" />
+</form>
