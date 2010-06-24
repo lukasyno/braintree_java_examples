@@ -13,7 +13,7 @@ public class ConfirmCustomerAction {
         BraintreeGateway gateway = Configuration.getBraintreeGateway();
 
         String queryString = ZTemplates.getServletService().getRequest().getQueryString();
-        Result<Customer> result = gateway.customer().confirmTransparentRedirect(queryString);
+        Result<Customer> result = gateway.transparentRedirect().confirmCustomer(queryString);
 
         if (result.isSuccess()) {
             ZTemplates.getServletService().render(new ConfirmCustomer(result.getTarget()));

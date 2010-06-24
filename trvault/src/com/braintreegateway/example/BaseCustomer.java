@@ -11,7 +11,7 @@ public class BaseCustomer {
     
     @ZExpose
     public String getTrUrl() {
-        return gateway.customer().transparentRedirectURLForCreate();
+        return gateway.transparentRedirect().url();
     }
     
     @ZExpose

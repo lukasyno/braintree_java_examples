@@ -13,7 +13,7 @@ public class ConfirmPaymentAction {
         BraintreeGateway gateway = Configuration.getBraintreeGateway();
 
         String queryString = ZTemplates.getServletService().getRequest().getQueryString();
-        Result<Transaction> result = gateway.transaction().confirmTransparentRedirect(queryString);
+        Result<Transaction> result = gateway.transparentRedirect().confirmTransaction(queryString);
 
         if (result.isSuccess()) {
             ZTemplates.getServletService().render(new ConfirmPayment(result.getTarget()));

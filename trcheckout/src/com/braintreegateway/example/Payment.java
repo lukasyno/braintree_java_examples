@@ -14,7 +14,7 @@ public class Payment {
     
     @ZExpose
     public String getTrUrl() {
-        return gateway.transaction().transparentRedirectURLForCreate();
+        return gateway.transparentRedirect().url();
     }
     
     @ZExpose
